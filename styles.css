@@ -55,6 +55,8 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/*** css resets end ***/
+
 body {
     font-family: "Open Sans", sans-serif;
     background-color: #A100004D;
@@ -65,20 +67,20 @@ h1 {
     color: #A10000;
     font-weight: 700;
     font-style: bold;
-    font-size: 28px;
+    font-size: 2rem; /* replaced px with rem */
     line-height: 100%;
 }
 
 h2 {
     font-weight: 700;
     font-style: bold;
-    font-size: 24px;
+    font-size: 1.5em; /* replaced px with rem */
     line-height: 100%;
 }
 
 p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem; /* replaced px with rem */
     line-height: 100%;
 }
 
@@ -87,7 +89,7 @@ ol, ul {
 }
 
 .top-image {
-    width: 1280px;
+    width: 1280px; /* replaced width with dimensions in HTML code */
     max-width: 1280px;
     height: 500px;
     min-height: 500px;

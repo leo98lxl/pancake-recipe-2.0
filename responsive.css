@@ -1,0 +1,140 @@
+@media only screen and (max-width: 1280px) {
+    .recipe-box {
+        width: 1100px;
+    }
+
+    .top-image {
+        width: 1100px;
+    }
+
+    .serving-box {
+        width: 1100px;
+        height: auto;
+    }
+
+    .bottom-image-left, .bottom-image-right {
+        width: 500px;
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .recipe-box {
+        width: 1000px;
+    }
+
+    .top-image {
+        width: 1000px;
+    }
+
+    .serving-box {
+        width: 1000px;
+    }
+
+    .bottom-image-left, .bottom-image-right {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .recipe-box {
+        width: 900px;
+    }
+
+    .top-image {
+        width: 900px;
+    }
+
+    .serving-box {
+        width: 900px;
+    }
+
+    .bottom-image-left, .bottom-image-right {
+        width: 408px;
+        min-width: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .recipe-box {
+        width: 800px;
+    }
+
+    .top-image {
+        width: 800px;
+    }
+
+    .serving-box {
+        width: 800px;
+    }
+
+    .bottom-image-left, .bottom-image-right {
+        display: grid;
+        margin: 0 auto;
+    }
+
+    .bottom-image-left {
+        margin-bottom: 24px;
+    }
+
+    .recipe-content {
+        padding: 48px 16px 64px 16px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .recipe-box {
+        width: 700px;
+    }
+
+    .top-image {
+        width: 700px;
+    }
+
+    .serving-box {
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .recipe-box {
+        width: 600px;
+    }
+
+    .top-image {
+        width: 600px;
+    }
+
+    .serving-box {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .recipe-box {
+        width: 500px;
+    }
+
+    .top-image {
+        width: 500px;
+    }
+
+    .serving-box {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .recipe-box {
+        width: 440px;
+    }
+
+    .top-image {
+        width: 440px;
+    }
+
+    .serving-box {
+        width: 408px;
+    }
+}

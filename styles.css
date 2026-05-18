@@ -44,7 +44,7 @@ ol, ul {
     object-fit: cover;
 }
 
-.serving-box {
+.serving-section {
     width: 1184px;
     height: 516px;
 }
@@ -68,7 +68,7 @@ ol, ul {
     padding: 48px 48px 64px 48px;
 }
 
-.recipe-description {
+.recipe-description-section {
     background-color: #EBEBEB;
     padding: 8px;
 }

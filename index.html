@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv"><!--changed to correct language-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,22 +12,34 @@
 </head>
 <body>
     <div class="recipe-box">
-        <img class="top-image" src="./images/pancake-top.jpg" alt="Bild på färdiga pannkakor med bär och grädde">
-            <div class="recipe-content">
-                <h1 class="recipe-title">Enkelt recept på pannkakor</h1>
-                <div class="recipe-description">
-                    <p>Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
-                </div>
-                <h2 class="ingredients">Ingredienser</h2>
-                    <p class="portions">För 4 portioner</p>
-                    <ul class="ingredients-list">
-                        <li class="ingredient">2 1/2 dl vetemjöl</li>
-                        <li class="ingredient">1/2 tsk salt</li>
-                            <li class="ingredient">6 dl mjölk</li>
-                            <li class="ingredient">3 ägg</li>
-                            <li class="ingredient">smör till stekning</li>
-                            <li class="ingredient">sylt, bär eller frukt till servering</li>
-                        </ul>
+        <section class="top-image-section"><!--added semantic element "section"-->
+            <figure id="top-image-figure"><!--added semantic element "figure"-->
+                <img class="top-image" src="./images/pancake-top.jpg" alt="Bild på färdiga pannkakor med bär och grädde">
+            </figure>
+        </section>
+
+            <main class="recipe-content"><!--added semantic element "main"-->
+                <section class="recipe-title-section"><!--added semantic element "section"-->
+                    <h1 class="recipe-title">Enkelt recept på pannkakor</h1>
+                </section>
+                <section class="recipe-description-section"><!--added semantic element "section"-->
+                    <p class="recipe-description">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
+                </section>
+
+                <section class="ingredients-section"><!--added semantic element "section"-->
+                    <h2 class="ingredients">Ingredienser</h2>
+                        <p class="portions">För 4 portioner</p>
+                        <ul class="ingredients-list">
+                            <li class="ingredient">2 1/2 dl vetemjöl</li>
+                            <li class="ingredient">1/2 tsk salt</li>
+                                <li class="ingredient">6 dl mjölk</li>
+                                <li class="ingredient">3 ägg</li>
+                                <li class="ingredient">smör till stekning</li>
+                                <li class="ingredient">sylt, bär eller frukt till servering</li>
+                            </ul>
+                </section>
+
+                <section class="instructions-section"><!--added semantic element "section"-->
                     <h2 class="instructions">Så här gör du</h2>
                         <ol class="instructions-list">
                             <li class="instruction">Blanda mjöl och salt i en bunke.</li>
@@ -37,12 +49,17 @@
                             <li class="instruction">Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna.</li>
                             <li class="instruction">Servera med sylt, bär eller frukt.</li>
                         </ol>
-                <div class="serving-box">
+                </section>
+
+                <section class="serving-section"><!--added semantic element "section"-->
                     <h2 class="serving">Serveringsförslag</h2>
-                    <img class="bottom-image-left" src="/images/pancake-bottom-left.jpg" alt="Bild på serveringsförslag med bär">
-                    <img class="bottom-image-right" src="/images/pancake-bottom-right.jpg" alt="Bild på serveringsförslag med frukt">
-                </div>
-            </div>
+                    <figure id="bottom-image-figures">
+                        <img class="bottom-image-left" src="/images/pancake-bottom-left.jpg" alt="Bild på serveringsförslag med bär">
+                        <img class="bottom-image-right" src="/images/pancake-bottom-right.jpg" alt="Bild på serveringsförslag med frukt">
+                    </figure>
+                </section>
+
+            </main>
     </div>
 </body>
 </html>

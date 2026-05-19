@@ -74,7 +74,7 @@ h1 {
 h2 {
     font-weight: 700;
     font-style: bold;
-    font-size: 1.5em; /* replaced px with rem */
+    font-size: 1.5rem; /* replaced px with rem */
     line-height: 100%;
 }
 
@@ -89,22 +89,19 @@ ol, ul {
 }
 
 .top-image {
-    width: 1280px; /* replaced width with dimensions in HTML code */
-    max-width: 1280px;
-    height: 500px;
+    max-width: 1280px; /* replaced width with dimensions in HTML code */
     min-height: 500px;
     object-fit: cover;
 }
 
 .bottom-image-left, .bottom-image-right {
-    width: 580px;
-    height: 467px;
-    min-width: 300px;
+    min-width: 580px; /* replaced width with dimensions in HTML code */
+    min-height: 467px; /* replaced width with dimensions in HTML code */
     object-fit: cover;
 }
 
 .serving-section {
-    width: 1184px;
+    min-width: 1184px; /* replaced width with min-width */
     height: 516px;
 }
 
@@ -118,7 +115,7 @@ ol, ul {
 
 .recipe-box {
     background-color: white;
-    width: 1280px;
+    min-width: 1280px; /* replaced width with min-width */
     margin: 0 auto;
     border: 1px solid white;
 }

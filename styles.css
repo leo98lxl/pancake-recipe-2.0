@@ -57,30 +57,48 @@ h1, h2, h3, h4, h5, h6 {
 
 /*** css resets end ***/
 
+/*** variables ***/ /* added variables */
+
+:root {
+  /* font-families */
+  --ff-main: "Open Sans", sans-serif;
+
+  /* font-weights */
+  --fw-headings: 800, bold;
+  --fw-text: 400;
+
+  /* font-sizes */
+  --fs-headings: 2rem; 
+  --fs-text: 1rem;
+
+  /* color settings */
+  --clr-pink: #A100004D;
+  --clr-white: white;
+  --clr-heading: #A10000;
+}
+
 body {
-    font-family: "Open Sans", sans-serif;
-    background-color: #A100004D;
+    background-color: var(--clr-pink); /* replaced with variable */
     padding-bottom: 64px;
 }
 
 h1 {
-    color: #A10000;
-    font-weight: 700;
-    font-style: bold;
-    font-size: 2rem; /* replaced px with rem */
+    color: var(--clr-heading);
+    font-weight: var(--fw-headings);
+    font-size: var(--fs-headings); /* replaced px with rem and variable */
     line-height: 100%;
 }
 
 h2 {
-    font-weight: 700;
+    font-weight: var(--fw-headings); /* replaced with variable */
     font-style: bold;
-    font-size: 1.5rem; /* replaced px with rem */
+    font-size: calc(var(--fs-headings)0.75); /* replaced px with rem and variable */
     line-height: 100%;
 }
 
 p {
-    font-weight: 400;
-    font-size: 1rem; /* replaced px with rem */
+    font-weight: var(--fw-text); /* replaced with variable */
+    font-size: var(--fs-text); /* replaced px with rem and variable */
     line-height: 100%;
 }
 
@@ -102,7 +120,7 @@ ol, ul {
 
 .serving-section {
     min-width: 1184px; /* replaced width with min-width */
-    height: 516px;
+    min-height: 516px; /* replaced height with min-height */
 }
 
 .bottom-image-left {

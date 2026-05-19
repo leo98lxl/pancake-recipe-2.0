@@ -71,39 +71,40 @@ h1, h2, h3, h4, h5, h6 {
   --fs-headings: 2rem; 
   --fs-text: 1rem;
 
+  /* line-heights */
+  --lh-normal: 1.5;
+  --lh-large: 2.0;
+
   /* color settings */
   --clr-pink: #A100004D;
   --clr-white: white;
   --clr-heading: #A10000;
 }
 
+/*** variables end ***/
+
 body {
+    font-family: var(--ff-main); /* replaced with variable */
     background-color: var(--clr-pink); /* replaced with variable */
     padding-bottom: 64px;
 }
 
-h1 {
+/* added nesting */
+h1, h2 {
     color: var(--clr-heading);
-    font-weight: var(--fw-headings);
-    font-size: var(--fs-headings); /* replaced px with rem and variable */
-    line-height: 100%;
-}
-
-h2 {
     font-weight: var(--fw-headings); /* replaced with variable */
-    font-style: bold;
-    font-size: calc(var(--fs-headings)0.75); /* replaced px with rem and variable */
-    line-height: 100%;
+    font-size: var(--fs-headings); /* replaced px with rem and variable */
+    line-height: var(--lh-normal); /* replaced with variable */
 }
 
 p {
     font-weight: var(--fw-text); /* replaced with variable */
     font-size: var(--fs-text); /* replaced px with rem and variable */
-    line-height: 100%;
+    line-height: var(--lh-normal); /* replaced with variable */
 }
 
 ol, ul {
-    line-height: 32px;
+    line-height: var(--lh-large);
 }
 
 .top-image {

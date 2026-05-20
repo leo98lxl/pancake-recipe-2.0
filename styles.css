@@ -143,6 +143,7 @@ ol, ul {
 }
 
 .recipe__serving {
+    display: flex;
     min-width: 1184px; /* replaced width with min-width */
     min-height: 516px; /* replaced height with min-height */
 }
@@ -152,12 +153,12 @@ ol, ul {
     min-height: 500px;
 }
 
-.image--bottom-left {
-    float: left;
+.image__bottom--left {
+    flex: 50%;
 }
 
-.image--bottom-right {
-    float: right;
+.image__bottom--right {
+    flex: 50%;
 }
 
 /*** block selectors end ***/

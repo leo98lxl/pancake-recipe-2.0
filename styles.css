@@ -61,10 +61,11 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   /* font-families */
-  --ff-main: "Open Sans", sans-serif;
+  --ff-main: "Ubuntu", sans-serif;
 
   /* font-weights */
-  --fw-headings: 800, bold;
+  --fw-headings-bold: 700;
+  --fw-headings: 500;
   --fw-text: 400;
 
   /* font-sizes */
@@ -95,10 +96,16 @@ body {
     padding-bottom: 64px;
 }
 
-/* added nesting */
-h1, h2 {
+h1 {
+    font-weight: var(--fw-headings-bold); /* replaced with variable */
     color: var(--clr-heading);
+}
+
+h2 {
     font-weight: var(--fw-headings); /* replaced with variable */
+}
+
+h1, h2 {
     font-size: var(--fs-headings); /* replaced px with rem and variable */
     line-height: var(--lh-normal); /* replaced with variable */
 }
@@ -113,43 +120,44 @@ ol, ul {
     line-height: var(--lh-large);
 }
 
-.top-image {
-    max-width: 1280px; /* replaced width with dimensions in HTML code */
-    min-height: 500px;
-    object-fit: cover;
-}
-
-.bottom-image-left, .bottom-image-right {
-    min-width: 580px; /* replaced width with dimensions in HTML code */
-    min-height: 467px; /* replaced width with dimensions in HTML code */
-    object-fit: cover;
-}
-
-.serving-section {
-    min-width: 1184px; /* replaced width with min-width */
-    min-height: 516px; /* replaced height with min-height */
-}
-
-.bottom-image-left {
-    float: left;
-}
-
-.bottom-image-right {
-    float: right;
-}
-
-.recipe-box {
+.recipe {
     background-color: var(--clr-white);
     min-width: 1280px; /* replaced width with min-width */
     margin: 0 auto;
     border: 1px solid var(--clr-white);
 }
 
-.recipe-content {
+.recipe__content {
     padding: var(--spc-medium);
 }
 
-.recipe-description-section {
+.recipe__description {
     background-color: var(--clr-rcp-desc);
     padding: var(--spc-small);
+}
+
+.recipe__serving {
+    min-width: 1184px; /* replaced width with min-width */
+    min-height: 516px; /* replaced height with min-height */
+}
+
+.image {
+  object-fit: cover;
+  min-height: 500px;
+}
+
+.image--top {
+    max-width: 1280px; /* replaced width with dimensions in HTML code */
+}
+
+.image--bottom-left, .image--bottom-right {
+    min-width: 580px; /* replaced width with dimensions in HTML code */
+}
+
+.image--bottom-left {
+  float: left;
+}
+
+.image--bottom-right {
+  float: right;
 }

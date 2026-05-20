@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*** css resets end ***/
 
-/*** variables ***/ /* added variables */
+/*** variables ***/
 
 :root {
   /* font-families */
@@ -85,10 +85,12 @@ h1, h2, h3, h4, h5, h6 {
   --clr-pink: #a100004d;
   --clr-white: #ffffff;
   --clr-heading: #A10000;
-  --clr-rcp-desc: #EBEBEB;
+  --clr-recipe-desc: #EBEBEB;
 }
 
 /*** variables end ***/
+
+/*** general selectors ***/
 
 body {
     font-family: var(--ff-main); /* replaced with variable */
@@ -120,6 +122,10 @@ ol, ul {
     line-height: var(--lh-large);
 }
 
+/*** general selectors end ***/
+
+/*** block selectors ***/
+
 .recipe {
     background-color: var(--clr-white);
     min-width: 1280px; /* replaced width with min-width */
@@ -132,7 +138,7 @@ ol, ul {
 }
 
 .recipe__description {
-    background-color: var(--clr-rcp-desc);
+    background-color: var(--clr-recipe-desc);
     padding: var(--spc-small);
 }
 
@@ -142,22 +148,16 @@ ol, ul {
 }
 
 .image {
-  object-fit: cover;
-  min-height: 500px;
-}
-
-.image--top {
-    max-width: 1280px; /* replaced width with dimensions in HTML code */
-}
-
-.image--bottom-left, .image--bottom-right {
-    min-width: 580px; /* replaced width with dimensions in HTML code */
+    object-fit: cover;
+    min-height: 500px;
 }
 
 .image--bottom-left {
-  float: left;
+    float: left;
 }
 
 .image--bottom-right {
-  float: right;
+    float: right;
 }
+
+/*** block selectors end ***/

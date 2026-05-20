@@ -128,7 +128,7 @@ ol, ul {
 
 .recipe {
     background-color: var(--clr-white);
-    min-width: 1280px; /* replaced width with min-width */
+    max-width: 1280px; /* replaced width with max-width */
     margin: 0 auto;
     border: 1px solid var(--clr-white);
 }

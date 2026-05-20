@@ -75,10 +75,16 @@ h1, h2, h3, h4, h5, h6 {
   --lh-normal: 1.5;
   --lh-large: 2.0;
 
+  /* spacings */
+  --spc-small: 0.75rem;
+  --spc-medium: 1.5rem;
+  --spc-large: 2.0rem;
+
   /* color settings */
-  --clr-pink: #A100004D;
-  --clr-white: white;
+  --clr-pink: #a100004d;
+  --clr-white: #ffffff;
   --clr-heading: #A10000;
+  --clr-rcp-desc: #EBEBEB;
 }
 
 /*** variables end ***/
@@ -133,17 +139,17 @@ ol, ul {
 }
 
 .recipe-box {
-    background-color: white;
+    background-color: var(--clr-white);
     min-width: 1280px; /* replaced width with min-width */
     margin: 0 auto;
-    border: 1px solid white;
+    border: 1px solid var(--clr-white);
 }
 
 .recipe-content {
-    padding: 48px 48px 64px 48px;
+    padding: var(--spc-medium);
 }
 
 .recipe-description-section {
-    background-color: #EBEBEB;
-    padding: 8px;
+    background-color: var(--clr-rcp-desc);
+    padding: var(--spc-small);
 }

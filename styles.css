@@ -95,7 +95,12 @@ h1, h2, h3, h4, h5, h6 {
 body {
     font-family: var(--ff-main); /* replaced with variable */
     background-color: var(--clr-pink); /* replaced with variable */
-    padding-bottom: 64px;
+    padding-bottom: calc(var(--spc-large) * 2); /* replaced with variable */
+}
+
+:is(h1, h2) {
+    font-size: var(--fs-headings); /* replaced px with rem and variable */
+    line-height: var(--lh-normal); /* replaced with variable */
 }
 
 h1 {
@@ -107,18 +112,13 @@ h2 {
     font-weight: var(--fw-headings); /* replaced with variable */
 }
 
-h1, h2 {
-    font-size: var(--fs-headings); /* replaced px with rem and variable */
-    line-height: var(--lh-normal); /* replaced with variable */
-}
-
 p {
     font-weight: var(--fw-text); /* replaced with variable */
     font-size: var(--fs-text); /* replaced px with rem and variable */
     line-height: var(--lh-normal); /* replaced with variable */
 }
 
-ol, ul {
+:is(ol, ul) {
     line-height: var(--lh-large);
 }
 
@@ -131,6 +131,10 @@ ol, ul {
     max-width: 1280px; /* replaced width with max-width */
     margin: 0 auto;
     border: 1px solid var(--clr-white);
+
+    img {
+      object-fit: cover;
+    }
 }
 
 .recipe__content {
@@ -143,22 +147,20 @@ ol, ul {
 }
 
 .recipe__serving {
-    display: flex;
-    min-width: 1184px; /* replaced width with min-width */
-    min-height: 516px; /* replaced height with min-height */
-}
+    display: grid;
 
-.image {
-    object-fit: cover;
-    min-height: 500px;
+    img {
+    min-height: 300px;
+    padding-bottom: var(--spc-medium);
+    }
 }
 
 .image__bottom--left {
-    flex: 50%;
+    float: left;
 }
 
 .image__bottom--right {
-    flex: 50%;
+    float: right;
 }
 
 /*** block selectors end ***/

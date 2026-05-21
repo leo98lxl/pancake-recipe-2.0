@@ -10,12 +10,7 @@
   margin: 0;
 }
 
-/* 3. Enable keyword animations */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
+/* 3. Enable keyword animations - removed due to lack of Firefox support */
 
 body {
   /* 4. Increase line-height */
@@ -24,11 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 6. Improve media defaults */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
+/* 6. Improve media defaults - removed due to "display:block" not working well with positioning images next to each other */
 
 /* 7. Inherit fonts for form controls */
 input, button, textarea, select {
@@ -100,7 +91,7 @@ body {
 
 :is(h1, h2) {
     font-size: var(--fs-headings); /* replaced px with rem and variable */
-    line-height: var(--lh-normal); /* replaced with variable */
+    line-height: var(--lh-large); /* replaced px with rem and variable */
 }
 
 h1 {
@@ -115,7 +106,11 @@ h2 {
 p {
     font-weight: var(--fw-text); /* replaced with variable */
     font-size: var(--fs-text); /* replaced px with rem and variable */
-    line-height: var(--lh-normal); /* replaced with variable */
+}
+
+img {
+    object-fit: cover;
+    border: solid 1px var(--clr-white);
 }
 
 :is(ol, ul) {
@@ -130,11 +125,6 @@ p {
     background-color: var(--clr-white);
     max-width: 1280px; /* replaced width with max-width */
     margin: 0 auto;
-    border: 1px solid var(--clr-white);
-
-    img {
-      object-fit: cover;
-    }
 }
 
 .recipe__content {
@@ -144,13 +134,11 @@ p {
 .recipe__description {
     background-color: var(--clr-recipe-desc);
     padding: var(--spc-small);
+    border-radius: 1ch;
 }
 
 .recipe__serving {
-    display: grid;
-
     img {
-    min-height: 300px;
     padding-bottom: var(--spc-medium);
     }
 }

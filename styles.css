@@ -125,6 +125,8 @@ img {
     background-color: var(--clr-white);
     max-width: 1280px; /* replaced width with max-width */
     margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr;
 }
 
 .recipe__content {
@@ -139,15 +141,17 @@ img {
 
 .recipe__serving {
     img {
-    padding-bottom: var(--spc-medium);
-    }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: var(--spc-medium);
+      }
 }
 
-.image__bottom--left {
+.image--bottom-left {
     float: left;
 }
 
-.image__bottom--right {
+.image--bottom-right {
     float: right;
 }
 

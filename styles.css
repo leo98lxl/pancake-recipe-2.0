@@ -125,8 +125,6 @@ img {
     background-color: var(--clr-white);
     max-width: 1280px; /* replaced width with max-width */
     margin: 0 auto;
-    /* display: grid;
-    grid-template-rows: 1fr; */
 }
 
 .recipe__content {
@@ -142,8 +140,9 @@ img {
 
 .recipe__serving {
     img {
-      display: inline-block;
-      /* grid-template-columns: 1fr 1fr; */
+      display: flex;
+      gap: 1rem;
+      justify-content: start;
       margin-block-end: var(--spc-medium); /* changed "padding-bottom" to "margin-block-end" */
       }
 }

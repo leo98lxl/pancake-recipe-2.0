@@ -1,52 +1,49 @@
 <!DOCTYPE html>
-<html lang="sv"><!--changed to correct language-->
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enkelt pannkaksrecept</title>
+    <title>Enkelt pannkaksrecept - Hem</title>
 
     <link href="styles.css" rel="stylesheet">
-    <!--link href="responsive.css" rel="stylesheet"--> <!--temporarily disabled-->
 
-    <!--imported font "Ubuntu" from Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!--imported logo "Egg Alt" from Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=egg_alt" />
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__navigation">
-            <ul class="header__navigation--list">
-                <li class="navigation-item">
-                    <figure><img class="header__logo" src="" alt="" width="" height=""></figure>
-                </li>
-                <li class="navigation-item">Recept<a href="/page-2.html"></a></li>
-                <li class="navigation-item">Om oss<a href="/page-2.html"></a></li>
-                <li class="navigation-item">Kontakt<a href="/page-2.html"></a></li>
-                <li class="navigation-item">Logga in<a href="/page-2.html"></a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="recipe"><!--BEM-style structure start-->
-        <section class="recipe__top"><!--added semantic element "section"-->
-            <figure><!--added semantic element "figure"-->
-                <img class="recipe__top image--top" src="./images/pancake-top.jpg" 
-                alt="Bild på färdiga pannkakor med bär och grädde" width="1280" height="500"><!--added img dimensions-->
+    <section class="recipe">
+        <header class="header"><!--added navigation bar-->
+            <nav class="header__navigation">
+                <ul class="header__navigation--list">
+                    <li><a href="/page-2.html"><span class="material-symbols-outlined">egg_alt</span></a></li> <!--added logo-->
+                    <li><a href="/page-2.html">Recept</a></li>
+                    <li><a href="/page-2.html">Om oss</a></li>
+                    <li><a href="/page-2.html">Kontakt</a></li>
+                    <li><a href="/page-2.html">Logga in</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <main class="recipe__content">
+        <section class="recipe__top">
+            <figure>
+                <img class="recipe__top--image" src="./images/pancake-top.jpg" 
+                alt="Bild på färdiga pannkakor med bär och grädde" width="1200" height="500">
             </figure>
         </section>
-
-            <main class="recipe__content"><!--added semantic element "section"-->
-                <section class="recipe__title"><!--added semantic element "section"-->
+                <section class="recipe__title">
                     <h1 class="recipe__title--heading">Enkelt recept på pannkakor</h1>
                 </section>
-                <section class="recipe__description"><!--added semantic element "section"-->
+                <section class="recipe__description">
                     <p class="recipe__description--text">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
                 </section>
 
-                <section class="recipe__ingredients"><!--added semantic element "section"-->
+                <section class="recipe__ingredients">
                     <h2 class="recipe__ingredients--heading">Ingredienser</h2>
                         <p class="portions">För 4 portioner</p>
                             <ul class="ingredients-list">
@@ -59,7 +56,7 @@
                             </ul>
                 </section>
 
-                <section class="recipe__instructions"><!--added semantic element "section"-->
+                <section class="recipe__instructions">
                     <h2 class="recipe__instructions--heading">Så här gör du</h2>
                         <ol class="instructions-list">
                             <li class="instruction-item">Blanda mjöl och salt i en bunke.</li>
@@ -71,11 +68,11 @@
                         </ol>
                 </section>
 
-                <section class="recipe__serving"><!--added semantic element "section"-->
+                <section class="recipe__serving">
                     <h2 class="recipe__serving--heading">Serveringsförslag</h2>
-                        <figure class="recipe__serving--images"><!--added semantic element "figure"-->
-                            <img class="recipe__serving image--bottom-left" src="/images/pancake-bottom-left.jpg" alt="Bild på serveringsförslag med bär" width="600" height="450"><!--added img dimensions-->
-                            <img class="recipe__serving image--bottom-right" src="/images/pancake-bottom-right.jpg" alt="Bild på serveringsförslag med frukt" width="600" height="450"><!--added img dimensions-->
+                        <figure class="recipe__serving--images">
+                            <img class="recipe__serving image--bottom-left" src="/images/pancake-bottom-left.jpg" alt="Bild på serveringsförslag med bär" width="500" height="350"><!--added img dimensions-->
+                            <img class="recipe__serving image--bottom-right" src="/images/pancake-bottom-right.jpg" alt="Bild på serveringsförslag med frukt" width="500" height="350"><!--added img dimensions-->
                         </figure>
                     </section>
                 </main>

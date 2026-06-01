@@ -110,11 +110,25 @@ p {
 
 img {
     object-fit: cover;
-    border: solid 1px var(--clr-white);
+    border: solid 2px var(--clr-heading);
+    border-radius: 1.5ch;
 }
 
 :is(ol, ul) {
     line-height: var(--lh-large);
+}
+
+a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--clr-heading);
+  text-decoration: none;
+
+  &:hover, :focus-visible {
+    cursor: pointer;
+    color: var(--clr-white);
+  }
 }
 
 /*** general selectors end ***/
@@ -125,11 +139,11 @@ img {
   position: sticky;
   top: 0;
   background-color: var(--clr-recipe-desc);
-  border-block-end: 3px solid var(--clr-heading);
   display: flex;
   gap: 1rem;
   padding: var(--spc-small);
   justify-content: space-between;
+  box-shadow: 0 0 10px 0px black;
 }
 
 .header__list--item {
@@ -138,12 +152,12 @@ img {
   justify-content: center;
   list-style: none;
 
-  &:hover {
+  &:hover, :focus-visible {
     background-color: var(--clr-heading);
     font-weight: var(--fw-headings-bold);
     cursor: pointer;
     border: 1px solid var(--clr-heading);
-    border-radius: 50%;
+    border-radius: 2ch;
   }
 }
 
@@ -158,21 +172,22 @@ img {
     color: var(--clr-white);
     font-weight: var(--fw-headings-bold);
     cursor: pointer;
+    box-shadow: 0 0 10px 0px black;
   }
 }
 
 .recipe {
     background-color: var(--clr-white);
     border: 1px solid var(--clr-heading);
-    max-width: 1280px; /* replaced width with max-width */
+    width: min(95%, 1280px); /* replaced max-width with min */
     margin: 0 auto;
 }
 
 .recipe__top--image {
   display: flex;
   justify-content: center;
-  width: 100%;
   flex-wrap: wrap;
+  width: clamp(300px, 100%, 1200px); /* replaced max-width with clamp */
 }
 
 .recipe__content {
@@ -180,7 +195,7 @@ img {
 }
 
 .recipe__description {
-    display: inline-block; /* added "display: inline-block" to restrict block size for improved responsiveness */
+    display: inline-block;
     background-color: var(--clr-recipe-desc);
     padding: var(--spc-small);
     border-radius: 1ch;
@@ -191,7 +206,7 @@ img {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(1.5rem, 100%)1fr));
     justify-items: center;
-    margin-block-end: var(--spc-medium); /* changed "padding-bottom" to "margin-block-end" */
+    margin-block-end: var(--spc-medium);
 
     @media (width >= 64rem) {
       grid-template-columns: repeat(2, 1fr);
@@ -213,3 +228,5 @@ img {
       grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/*** page 2 end ***/

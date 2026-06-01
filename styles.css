@@ -117,19 +117,6 @@ img {
     line-height: var(--lh-large);
 }
 
-a {
-  color: var(--clr-heading);
-  text-decoration: none;
-  padding: var(--spc-small);
-  
-  &:hover, &:focus-visible {
-    background-color: var(--clr-heading);
-    color: var(--clr-white);
-    cursor: pointer;
-    border: 1px solid var(--clr-heading);
-    border-radius: 50%;
-  }
-}
 /*** general selectors end ***/
 
 /*** block selectors ***/
@@ -138,16 +125,39 @@ a {
   position: sticky;
   top: 0;
   background-color: var(--clr-recipe-desc);
-  border-block-end: 1px solid var(--clr-heading);
+  border-block-end: 3px solid var(--clr-heading);
   display: flex;
   gap: 1rem;
   padding: var(--spc-small);
   justify-content: space-between;
+}
 
-  .header__top li {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+.header__list--item {
+  color: var(--clr-heading);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  &:hover {
+    background-color: var(--clr-heading);
+    font-weight: var(--fw-headings-bold);
+    cursor: pointer;
+    border: 1px solid var(--clr-heading);
+    border-radius: 50%;
+  }
+}
+
+.header__top--button {
+  color: var(--clr-heading);
+  background-color: var(--clr-white);
+  border: 2px solid var(--clr-heading);
+  border-radius: 2ch;
+
+  &:hover, :focus-visible {
+    background-color: var(--clr-heading);
+    color: var(--clr-white);
+    font-weight: var(--fw-headings-bold);
+    cursor: pointer;
   }
 }
 

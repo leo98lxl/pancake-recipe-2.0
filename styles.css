@@ -95,12 +95,13 @@ body {
 :is(h1, h2) {
     font-size: var(--fs-headings); /* replaced px with rem and variable */
     line-height: var(--lh-large); /* replaced px with rem and variable */
-}
-
-h1 {
+  }
+  
+  h1 {
     font-weight: var(--fw-headings-bold); /* replaced with variable */
     color: var(--clr-heading);
-}
+    text-wrap: wrap;
+  }
 
 h2 {
     font-weight: var(--fw-headings); /* replaced with variable */
@@ -182,7 +183,7 @@ a {
 .recipe {
   background-color: var(--clr-white);
   border: 1px solid var(--clr-heading);
-  width: min(95%, 1280px); /* replaced max-width with min */
+  width: clamp(350px, 95%, 1280px); /* replaced max-width with clamp */
   margin: 0 auto;
 }
 
@@ -204,11 +205,12 @@ a {
     border-radius: 1ch;
 }
 
-.recipe__serving--images {
+.recipe__serving img {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(1.5rem, 100%)1fr));
     justify-items: center;
+    width: clamp(300px, 95%, 450px);
     margin-block-end: var(--spc-medium);
 
     @media (width >= 64rem) {

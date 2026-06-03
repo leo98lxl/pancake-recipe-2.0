@@ -1,4 +1,4 @@
-/*** css resets ***/
+/*** css reset from Josh https://www.joshwcomeau.com/ ***/
 
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
@@ -13,13 +13,20 @@
 /* 3. Enable keyword animations - removed due to lack of Firefox support */
 
 body {
-  /* 4. Increase line-height */
-  line-height: 1.5;
-  /* 5. Improve text rendering */
+/* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
 
-/* 6. Improve media defaults - removed due to "display:block" not working well with positioning images next to each other */
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-inline-size: 100%;
+  /** tip from Kevin Powell **/
+}
 
 /* 7. Inherit fonts for form controls */
 input, button, textarea, select {
@@ -60,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   --fw-text: 400;
 
   /* font-sizes */
-  --fs-headings: 2rem; 
+  --fs-headings: 1.75rem; 
   --fs-text: 1rem;
 
   /* line-heights */
@@ -87,29 +94,29 @@ h1, h2, h3, h4, h5, h6 {
 /*** general selectors ***/
 
 body {
-    font-family: var(--ff-main); /* replaced with variable */
-    background-color: var(--clr-pink); /* replaced with variable */
-    padding-block-end: calc(var(--spc-large) * 2); /* replaced with variable */ /* changed "padding-bottom" to block */
+    font-family: var(--ff-main); 
+    background-color: var(--clr-pink); 
+    padding-block-end: calc(var(--spc-large) * 2);
+    line-height: var(--lh-large);
 }
 
 :is(h1, h2) {
-    font-size: var(--fs-headings); /* replaced px with rem and variable */
-    line-height: var(--lh-large); /* replaced px with rem and variable */
+    font-size: var(--fs-headings); 
+    line-height: var(--lh-normal);
   }
   
-  h1 {
-    font-weight: var(--fw-headings-bold); /* replaced with variable */
-    color: var(--clr-heading);
-    text-wrap: wrap;
-  }
+h1 {
+  font-weight: var(--fw-headings-bold);
+  color: var(--clr-heading);
+}
 
 h2 {
-    font-weight: var(--fw-headings); /* replaced with variable */
+    font-weight: var(--fw-headings);
 }
 
 p {
-    font-weight: var(--fw-text); /* replaced with variable */
-    font-size: var(--fs-text); /* replaced px with rem and variable */
+    font-weight: var(--fw-text);
+    font-size: var(--fs-text);
 }
 
 img {
@@ -139,7 +146,7 @@ a {
 
 /*** block selectors ***/
 
-.header__top {
+/* .header__top {
   position: sticky;
   top: 0;
   background-color: var(--clr-recipe-desc);
@@ -148,9 +155,9 @@ a {
   padding: var(--spc-small);
   justify-content: space-between;
   box-shadow: var(--shdw-small);
-}
+} */
 
-.header__list--item {
+/* .header__list--item {
   color: var(--clr-heading);
   display: flex;
   justify-content: center;
@@ -163,8 +170,8 @@ a {
     border: 1px solid var(--clr-heading);
     border-radius: 2ch;
   }
-}
-
+} */
+/* 
 .header__top--button {
   color: var(--clr-heading);
   background-color: var(--clr-white);
@@ -178,13 +185,14 @@ a {
     cursor: pointer;
     box-shadow: var(--shdw-small);
   }
-}
+} */
 
 .recipe {
   background-color: var(--clr-white);
   border: 1px solid var(--clr-heading);
-  width: clamp(350px, 95%, 1280px); /* replaced max-width with clamp */
+  width: clamp(350px, 95%, 1200px); /* replaced max-width with clamp */
   margin: 0 auto;
+  padding: var(--spc-small);
 }
 
 .recipe__top--image {
@@ -194,18 +202,14 @@ a {
   width: clamp(300px, 100%, 1200px); /* replaced max-width with clamp */
 }
 
-.recipe__content {
-    padding: var(--spc-medium);
-}
-
-.recipe__description {
+/* .recipe__description {
     display: inline-block;
     background-color: var(--clr-recipe-desc);
     padding: var(--spc-small);
     border-radius: 1ch;
-}
+} */
 
-.recipe__serving img {
+/* .recipe__serving img {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(1.5rem, 100%)1fr));
@@ -216,7 +220,7 @@ a {
     @media (width >= 64rem) {
       grid-template-columns: repeat(2, 1fr);
     }
-}
+} */
 
 /*** block selectors end ***/
 

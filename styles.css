@@ -129,7 +129,7 @@ img {
     line-height: var(--lh-large);
 }
 
-a {
+/* li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -139,60 +139,73 @@ a {
   &:hover, :focus-visible {
     cursor: pointer;
     color: var(--clr-white);
+    background-color: var(--clr-heading);
   }
-}
+} */
 
 /*** general selectors end ***/
 
 /*** block selectors ***/
 
-/* .header__top {
+.header__navigation {
   position: sticky;
   top: 0;
   background-color: var(--clr-recipe-desc);
+
   display: flex;
-  gap: 1rem;
-  padding: var(--spc-small);
+  flex-wrap: wrap;
   justify-content: space-between;
+
+  padding: var(--spc-small);
   box-shadow: var(--shdw-small);
-} */
 
-/* .header__list--item {
-  color: var(--clr-heading);
-  display: flex;
-  justify-content: center;
-  list-style: none;
-
-  &:hover, :focus-visible {
-    background-color: var(--clr-heading);
-    font-weight: var(--fw-headings-bold);
-    cursor: pointer;
-    border: 1px solid var(--clr-heading);
-    border-radius: 2ch;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style-type: none;
   }
-} */
-/* 
+}
+
+.header__list--item {
+  padding-inline: var(--spc-small);
+  color: var(--clr-heading);
+  border-radius: 2ch;
+  text-decoration: none;
+  border-inline: 1px solid var(--clr-heading);
+
+  &:hover, focus-visible {
+    background-color: color-mix(in hsl, var(--clr-heading) 55%, var(--clr-white) 45%);
+    color: var(--clr-white);
+    cursor: pointer;
+  }
+}
+
 .header__top--button {
   color: var(--clr-heading);
   background-color: var(--clr-white);
   border: 2px solid var(--clr-heading);
   border-radius: 2ch;
+  padding-inline: 2ch;
 
   &:hover, :focus-visible {
-    background-color: var(--clr-heading);
+    background-color: color-mix(in hsl, var(--clr-heading) 55%, var(--clr-white) 45%);
     color: var(--clr-white);
-    font-weight: var(--fw-headings-bold);
     cursor: pointer;
-    box-shadow: var(--shdw-small);
   }
-} */
+}
+
+.header__top--logo {
+  color: var(--clr-heading);
+}
 
 .recipe {
   background-color: var(--clr-white);
   border: 1px solid var(--clr-heading);
   width: clamp(350px, 95%, 1200px); /* replaced max-width with clamp */
   margin: 0 auto;
-  padding: var(--spc-small);
+  padding-block-end: var(--spc-small);
 }
 
 .recipe__top--image {

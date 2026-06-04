@@ -243,7 +243,7 @@ img {
 
 /*** block selectors end ***/
 
-/*** page 2 ***/
+/*** page "recipes" ***/
 
 .recipe__collection {
   display: grid;
@@ -257,4 +257,16 @@ img {
     }
 }
 
-/*** page 2 end ***/
+/*** page "recipes" end ***/
+
+/*** page "form" ***/
+
+.form__area {
+  text-align: center;
+  padding-block: var(--spc-small);
+
+  label {
+    display: block;
+    font-weight: var(--fw-headings);
+  }
+}

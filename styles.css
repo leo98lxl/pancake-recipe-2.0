@@ -176,7 +176,7 @@ img {
   text-decoration: none;
   border-inline: 1px solid var(--clr-heading);
 
-  &:hover, focus-visible {
+  &:hover, :focus-visible {
     background-color: color-mix(in hsl, var(--clr-heading) 55%, var(--clr-white) 45%);
     color: var(--clr-white);
     cursor: pointer;
@@ -259,6 +259,7 @@ img {
 
 form {
   display: grid;
+  grid-template-columns: 1fr;
   justify-items: center;
   gap: var(--spc-medium);
 
@@ -273,6 +274,7 @@ form button {
   border: 2px solid var(--clr-heading);
   border-radius: 2ch;
   padding-inline: 2ch;
+  grid-column: 1 / -1;
 
   &:hover, :focus-visible {
     background-color: color-mix(in hsl, var(--clr-heading) 55%, var(--clr-white) 45%);
@@ -289,6 +291,10 @@ input:not([type="file"]) {
   &:focus {
     outline: 0.5ch solid var(--clr-heading);
   }
+}
+
+form :has([type="checkbox"], [type="file"], textarea) {
+  grid-column: 1 / -1;
 }
 
 fieldset {

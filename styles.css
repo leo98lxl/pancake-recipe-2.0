@@ -261,12 +261,13 @@ img {
 
 /*** page "form" ***/
 
-.form__area {
-  text-align: center;
-  padding-block: var(--spc-small);
+form {
+  display: grid;
+  gap: var(--spc-medium);
+}
 
-  label {
-    display: block;
-    font-weight: var(--fw-headings);
-  }
+.form__area {
+  display: grid;
+  gap: var(--spc-small);
+  text-align: center;
 }

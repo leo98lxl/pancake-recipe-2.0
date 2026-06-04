@@ -27,10 +27,17 @@
             </nav>
 
             <main class="form">
-                <h1 class="form__header">Skicka in ditt recept till oss!</h1>
-                <p class="recipe__description">Vi tar jättegärna emot dina recept. Fyll i formuläret så bidrar du till vår redan gedigna samling!</p>
+                <section class="form__description">
+                    <h1 class="form__header">Skicka in ditt recept till oss!</h1>
+                    <p class="recipe__description">Vi tar jättegärna emot dina recept. Fyll i formuläret så bidrar du till vår redan gedigna samling!</p>
+                </section>
 
                 <form action="#" method="post">
+
+                    <div class="form__area">
+                        <label for="attachment">Ladda upp</label>
+                        <input type="file" id="attachment" name="attachment" required/>
+                    </div>
                     
                     <div class="form__area">
                         <label for="surname">Förnamn</label>
@@ -57,16 +64,6 @@
                         <input type="tel" id="phone" name="phone" placeholder="ex. 07x-xxx-xxx" required/>
                     </div>
 
-                    <div class="form__area">
-                        <label for="attachment">Ladda upp</label>
-                        <input type="file" id="attachment" name="attachment" required/>
-                    </div>
-
-                    <div class="form__area">
-                        <label for="message">Beskriv ditt recept med några ord! (valfritt)</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Beskrivning"/></textarea>
-                    </div>
-
                     <fieldset class="form__area--radio">
                         <legend>Hur ska vi kontakta dig&quest;</legend>
                         <label><input type="radio" name="contact-via" value="email">Via e-post</label>
@@ -75,8 +72,13 @@
                     </fieldset>
 
                     <div class="form__area">
+                        <label for="message">Beskriv ditt recept med några ord! (valfritt)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Beskrivning"/></textarea>
+                    </div>
+
+                    <div class="form__area">
                         <label>
-                        <input type="checkbox" name="updates" required/>Ja, jag vill få e-postaviseringar om våra nya recept!
+                        <input type="checkbox" name="updates"/>Ja, jag vill få e-postaviseringar om våra nya recept!
                     </div>
 
                     <button type="submit">Skicka in</button>

@@ -166,10 +166,6 @@ img {
     justify-content: center;
     gap: 1rem;
     list-style-type: none;
-
-    @media (width < 48rem) { /* hide links */
-      display: none;
-    }
   }
 }
 
@@ -263,11 +259,52 @@ img {
 
 form {
   display: grid;
+  justify-items: center;
   gap: var(--spc-medium);
+
+  @media (width > 36rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+form button {
+  color: var(--clr-heading);
+  background-color: var(--clr-white);
+  border: 2px solid var(--clr-heading);
+  border-radius: 2ch;
+  padding-inline: 2ch;
+
+  &:hover, :focus-visible {
+    background-color: color-mix(in hsl, var(--clr-heading) 55%, var(--clr-white) 45%);
+    color: var(--clr-white);
+    cursor: pointer;
+  }
+}
+
+input:not([type="file"]) {
+  background-color: color-mix(in hsl, var(--clr-heading) 15%, var(--clr-recipe-desc) 85%);
+  accent-color: var(--clr-heading);
+  border-radius: 1ch;
+
+  &:focus {
+    outline: 0.5ch solid var(--clr-heading);
+  }
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
 }
 
 .form__area {
   display: grid;
   gap: var(--spc-small);
   text-align: center;
+}
+
+.form__description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

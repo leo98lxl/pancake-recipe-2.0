@@ -225,16 +225,12 @@ img {
     border-radius: 1ch;
 }
 
-.recipe__serving {
+.recipe__serving--images {
     display: grid;
     gap: 1rem;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(min(1.5rem, 100%)1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(1.5rem, 100%), 1fr));
     padding-block: var(--spc-medium);
-
-    @media (width >= 72rem) {
-      grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 /*** block selectors end ***/
@@ -245,12 +241,8 @@ img {
   display: grid;
   gap: 1rem;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(min(1.5rem, 100%)1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(1.5rem, 100%), 1fr));
   padding-block: var(--spc-medium);
-  
-  @media (width >= 72rem) {
-      grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 /*** page "recipes" end ***/
@@ -283,12 +275,13 @@ form button {
   }
 }
 
-input:not([type="file"]) {
+input:not([type="file"]), textarea {
   background-color: color-mix(in hsl, var(--clr-heading) 15%, var(--clr-recipe-desc) 85%);
   accent-color: var(--clr-heading);
   border-radius: 1ch;
+  text-align: center;
 
-  &:focus {
+  &:focus-visible {
     outline: 0.5ch solid var(--clr-heading);
   }
 }
@@ -297,10 +290,9 @@ form :has([type="checkbox"], [type="file"], textarea) {
   grid-column: 1 / -1;
 }
 
-fieldset {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
+form :has([type="checkbox"], [type="radio"]) {
+  display: flex;
+  gap: 1ch;
 }
 
 .form__area {

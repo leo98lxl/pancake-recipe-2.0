@@ -1,6 +1,6 @@
 # Pancake Recipe Page 2.0
 ---
-An updated version of the pancake recipe page that I've previously made as part of an front-end web development course. The old version can be seen here: https://github.com/leo98lxl/260430-recipe-test
+An updated version of the pancake recipe page that I've previously made as part of an front-end web development course. The old version can be seen here: [Pancake Recipe Page](https://github.com/leo98lxl/pancake-recipe)
 ## Features
 This recipe page includes new features that I learned throughout the course, such as:
 - Semantic HTML code for improved accessibility. For example, replacing this:
